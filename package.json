@@ -1,0 +1,19 @@
+{
+  "name": "safeweb-project",
+  "version": "1.0.0",
+  "description": "SafeWeb - Extensão de Segurança e Monitoramento Web",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/url-tests.js",
+    "start:backend": "npm --prefix backend start",
+    "dev:backend": "npm --prefix backend run dev"
+  },
+  "keywords": [
+    "safeweb",
+    "chrome-extension",
+    "security",
+    "uptime-monitoring"
+  ],
+  "author": "SafeWeb",
+  "license": "MIT"
+}

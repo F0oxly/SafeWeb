@@ -1,2 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SafeWeb</title>
+  <link rel="stylesheet" href="../styles/common.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <main class="sw-popup">
+    <header class="sw-header">
+      <div class="sw-brand">
+        <div class="sw-logo" aria-hidden="true">
+          <span>✓</span>
+        </div>
+        <div>
+          <h1>SafeWeb</h1>
+          <p>Proteção durante a navegação</p>
+        </div>
+      </div>
+      <button id="btnHistory" class="sw-icon-btn" type="button" title="Histórico de alertas" aria-label="Histórico de alertas">↺</button>
+    </header>
 
-<!DOCTYPE html>
+    <section id="screenAnalysis" class="sw-screen">
+      <div class="sw-url-card">
+        <span class="sw-label">SITE ANALISADO</span>
+        <div id="siteUrl" class="sw-url">Aguardando análise...</div>
+      </div>
+
+      <section id="statusCard" class="sw-status-card sw-status-safe">
+        <div id="statusIcon" class="sw-status-icon">✓</div>
+        <div class="sw-status-copy">
+          <span id="statusKicker">Status</span>
+          <h2 id="statusTitle">Nenhuma ameaça identificada</h2>
+          <p id="statusDescription">Faça uma análise para verificar a segurança deste site.</p>
+        </div>
+      </section>
+
+      <div class="sw-actions">
+        <button id="btnAnalyze" class="sw-btn sw-btn-primary sw-main-btn" type="button">
+          Analisar site
+        </button>
+      </div>
+
+      <div class="sw-tip">
+        <span class="sw-tip-icon">i</span>
+        <p>O SafeWeb ajuda a identificar sinais que podem indicar páginas suspeitas ou maliciosas.</p>
+      </div>
+    </section>
+
+    <section id="screenHistory" class="sw-screen sw-hidden">
+      <div class="sw-screen-title">
+        <button id="btnBack" class="sw-back" type="button" aria-label="Voltar">←</button>
+        <div>
+          <span class="sw-label">REGISTROS</span>
+          <h2>Histórico de alertas</h2>
+        </div>
+      </div>
+
+      <div id="historyList" class="sw-history-list"></div>
+      <div id="historyEmpty" class="sw-empty sw-hidden">
+        <div class="sw-empty-icon">✓</div>
+        <h3>Nenhum alerta registrado</h3>
+        <p>Os resultados das análises aparecerão aqui.</p>
+      </div>
+
+      <button id="btnClearHistory" class="sw-btn sw-btn-secondary sw-clear-btn" type="button">
+        Limpar histórico
+      </button>
+    </section>
+  </main>
+  <script src="popup.js"></script>
+</body>
+</html>

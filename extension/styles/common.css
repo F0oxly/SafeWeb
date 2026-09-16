@@ -1,0 +1,97 @@
+
+:root {
+  --sw-bg: #f6f8fb;
+  --sw-surface: #ffffff;
+  --sw-surface-2: #f0f3f7;
+  --sw-text: #17202a;
+  --sw-muted: #667085;
+  --sw-border: #e3e7ed;
+  --sw-primary: #2563eb;
+  --sw-primary-dark: #1d4ed8;
+  --sw-safe: #16a34a;
+  --sw-safe-bg: #ecfdf3;
+  --sw-warning: #d97706;
+  --sw-warning-bg: #fff7ed;
+  --sw-danger: #dc2626;
+  --sw-danger-bg: #fef2f2;
+  --sw-shadow: 0 8px 24px rgba(16, 24, 40, .08);
+  --sw-radius: 14px;
+  --sw-radius-sm: 10px;
+  --sw-font: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-width: 360px;
+  font-family: var(--sw-font);
+  color: var(--sw-text);
+  background: var(--sw-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { min-height: 100%; }
+
+button, input {
+  font: inherit;
+}
+
+button { cursor: pointer; }
+
+.sw-hidden { display: none !important; }
+
+.sw-muted { color: var(--sw-muted); }
+
+.sw-icon {
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.sw-btn {
+  border: 0;
+  border-radius: 10px;
+  min-height: 40px;
+  padding: 0 14px;
+  font-weight: 650;
+  transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+}
+
+.sw-btn:active { transform: translateY(1px); }
+
+.sw-btn-primary {
+  color: #fff;
+  background: var(--sw-primary);
+  box-shadow: 0 4px 12px rgba(37, 99, 235, .22);
+}
+
+.sw-btn-primary:hover { background: var(--sw-primary-dark); }
+
+.sw-btn-secondary {
+  color: var(--sw-text);
+  background: var(--sw-surface);
+  border: 1px solid var(--sw-border);
+}
+
+.sw-btn-secondary:hover { background: var(--sw-surface-2); }
+
+.sw-card {
+  background: var(--sw-surface);
+  border: 1px solid var(--sw-border);
+  border-radius: var(--sw-radius);
+  box-shadow: var(--sw-shadow);
+}
+
+.sw-status-safe { color: var(--sw-safe); background: var(--sw-safe-bg); }
+.sw-status-warning { color: var(--sw-warning); background: var(--sw-warning-bg); }
+.sw-status-danger { color: var(--sw-danger); background: var(--sw-danger-bg); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; }
+}
